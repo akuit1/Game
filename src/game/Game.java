@@ -64,27 +64,27 @@ public class Game {
         initializeUI();
 
         // Start background music
-        try {
-            gametheme1 = new SoundClip("data/GameTheme1.wav");
-            gametheme1.setVolume(0.3);
-            gametheme1.loop();
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            System.out.println(e);
-        }
+        //try {
+        //    gametheme1 = new SoundClip("data/GameTheme1.wav");
+        //    gametheme1.setVolume(0.3);
+        //    gametheme1.loop();
+        //} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+        //    System.out.println(e);
+        //}
 
-        try {
-            gametheme2 = new SoundClip("data/GameTheme2.wav");
-            gametheme2.setVolume(1);
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            System.out.println(e);
-        }
+        //try {
+        //    gametheme2 = new SoundClip("data/GameTheme2.wav");
+        //    gametheme2.setVolume(1);
+        //} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+        //    System.out.println(e);
+        //}
 
-        try {
-            gametheme3 = new SoundClip("data/GameTheme3.wav");
-            gametheme3.setVolume(0.3);
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            System.out.println(e);
-        }
+        //try {
+        //    gametheme3 = new SoundClip("data/GameTheme3.wav");
+        //    gametheme3.setVolume(0.3);
+        //} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+        //    System.out.println(e);
+        //}
 
         // Start the game world simulation
         currentLevel.start();
@@ -98,8 +98,8 @@ public class Game {
             ((Level1) currentLevel).destroyLevelObjects();
             currentLevel.stop();
 
-            gametheme1.stop();
-            gametheme2.loop();
+            //gametheme1.stop();
+            //gametheme2.loop();
 
             currentArmour = player.getArmour();
             currentHealth = player.getHealth();
@@ -124,8 +124,8 @@ public class Game {
             ((Level2) currentLevel).destroyLevelObjects();
             currentLevel.stop();
 
-            gametheme2.stop();
-            gametheme3.loop();
+            //gametheme2.stop();
+            //gametheme3.loop();
 
             currentArmour = player.getArmour();
             currentHealth = player.getHealth();
@@ -155,7 +155,7 @@ public class Game {
         ((Level3) currentLevel).destroyLevelObjects();
         ((GameLevel) currentLevel).destroyLevelallObjects();
 
-        gametheme3.stop();
+        //gametheme3.stop();
 
         try {
             gamewon = new SoundClip("data/Gamewon.wav");
